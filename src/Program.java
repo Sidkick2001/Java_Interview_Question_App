@@ -1,8 +1,8 @@
-import cli.InterviewQuestion;
+import cli.Menu;
 
 public class Program {
     public static void main(String[] args) {
-        InterviewQuestion interviewQuestion = new InterviewQuestion();
+        Menu interviewQuestion = new Menu();
 
         interviewQuestion.start();
     }

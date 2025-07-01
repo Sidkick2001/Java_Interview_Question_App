@@ -6,10 +6,10 @@ public class MenuController {
     MenuService menuService = new MenuService();
 
     public void handleCommand(String command) {
-        if (command == "list") {
+        if (command.equals("list")) {
             //toDo
         }
-        if (command == "add") {
+        if (command.equals("add")) {
             menuService.addInterview();
         }
     }

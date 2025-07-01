@@ -1,5 +1,6 @@
 package model;
 
+
 public class Response {
     private String response;
 
@@ -10,5 +11,4 @@ public class Response {
     public void setResponse(String response) {
         this.response = response;
     }
-
 }

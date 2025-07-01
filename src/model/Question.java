@@ -1,5 +1,6 @@
 package model;
 
+
 public class Question {
     private String question;
 
@@ -10,6 +11,5 @@ public class Question {
     public void setQuestion(String question) {
         this.question = question;
     }
-
 
 }

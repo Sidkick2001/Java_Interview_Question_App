@@ -1,7 +1,7 @@
 package cli;
 
 public class MenuText {
-    public final String WELCOME_TEXT = "WELCOME TO JAVA INTERVIEW APP!\n";
+    public final String WELCOME_TEXT = "WELCOME TO JAVA INTERVIEW APP!";
     public final String MAIN_TEXT = """
         Доступные команды:
         
@@ -18,7 +18,7 @@ public class MenuText {
                         (для возрата введите "menu"):    
             """;
 
-    public final String TYPE_QUESTION_TEXT = "Введите вопрос: \n";
+    public final String TYPE_QUESTION_TEXT = "Введите вопрос:";
 
-    public final String TYPE_RESPONSES_TEXT = "Введите ответ: \n";
+    public final String TYPE_RESPONSES_TEXT = "Введите ответ:";
 }
