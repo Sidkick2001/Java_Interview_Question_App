@@ -11,4 +11,14 @@ public class MenuText {
         
         Введите команду:
         """;
+
+    public final String ADD_TEXT = """
+                    === Добавление интервью вопроса ===
+                            введите текст вопроса
+                        (для возрата введите "menu"):    
+            """;
+
+    public final String TYPE_QUESTION_TEXT = "Введите вопрос: \n";
+
+    public final String TYPE_RESPONSES_TEXT = "Введите ответ: \n";
 }

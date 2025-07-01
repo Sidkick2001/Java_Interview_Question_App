@@ -1,8 +1,16 @@
 package controller;
 
-public class MenuController {
+import service.MenuService;
 
-    void handleCommand(int command) {
-        //toDo
+public class MenuController {
+    MenuService menuService = new MenuService();
+
+    public void handleCommand(String command) {
+        if (command == "list") {
+            //toDo
+        }
+        if (command == "add") {
+            menuService.addInterview();
+        }
     }
 }

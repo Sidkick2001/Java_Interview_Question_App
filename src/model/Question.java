@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Question {
+public class Question {
     private String question;
 
     public String getQuestion() {
@@ -11,6 +11,5 @@ public abstract class Question {
         this.question = question;
     }
 
-    public abstract void addQuestion();
 
 }

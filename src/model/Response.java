@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Response {
+public class Response {
     private String response;
 
     public String getResponse() {
@@ -11,5 +11,4 @@ public abstract class Response {
         this.response = response;
     }
 
-    public abstract void addResponse();
 }
