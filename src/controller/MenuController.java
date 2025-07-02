@@ -7,7 +7,7 @@ public class MenuController {
 
     public void handleCommand(String command) {
         if (command.equals("list")) {
-            //toDo
+            menuService.showAllQuestions();
         }
         if (command.equals("add")) {
             menuService.addInterview();
