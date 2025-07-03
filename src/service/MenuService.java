@@ -1,43 +1,44 @@
 package service;
 
 
-import dao.InterviewQuestionsDao;
+import dao.InterviewsDao;
 import model.Question;
 import model.Response;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class MenuService {
     Question question = new Question();
     Response response = new Response();
-    InterviewQuestionsDao interviewQuestionsDao = new InterviewQuestionsDao();
+    InterviewsDao InterviewsDao = new InterviewsDao();
 
-    List<List> questionsAndResponsesList = new ArrayList<>();
 
 
     // list
     public void showAllInterviews() {
-        for (int i = 0; i < questionsAndResponsesList.size(); i++) {
-            interviewQuestionsDao.setInterviewQuestionsMap(i, questionsAndResponsesList);
-        }
-        System.out.println(interviewQuestionsDao.getInterviewQuestionsMap());
+        List<String> combined = IntStream.range(0, Math.min(question.getQuestions().size(), response.getResponses().size()))
+                .mapToObj(i ->"Вопрос: " + question.getQuestions().get(i)
+                        + "\n Ответ: " + response.getResponses().get(i))
+                .toList();
+        System.out.println(combined);
+    }
+
+
+    private void addQuestion(String text) {
+
+        if (!text.equals("menu")) {
+            question.addQuestion(text);
+        } else return;
+    }
+
+    private void addResponse(String text) {
+
+        if (!text.equals("menu")) {
+            response.addResponse(text);
+        } else return;
     }
 
     // add
-    public void addInterview(String questionFromMenu) {
 
-        if (!questionFromMenu.equals("menu")) {
-            question.addQuestion(questionFromMenu);
-            questionsAndResponsesList.add(question.getQuestions());
-        } else return;
-    }
-
-    public void addResponse(String responseFromMenu) {
-
-        if (!responseFromMenu.equals("menu")) {
-            response.addResponse(responseFromMenu);
-            questionsAndResponsesList.add(response.getResponses());
-        } else return;
-    }
 
 }

@@ -16,13 +16,10 @@ public class MenuController {
             menuService.showAllInterviews();
         }
         if (command.equals("add")) {
+            System.out.println(menuText.ADD_TEXT);
             System.out.println(menuText.TYPE_QUESTION_TEXT);
-            String questionFromMenu = scanner.nextLine();
-            menuService.addInterview(questionFromMenu);
 
-            System.out.println(menuText.TYPE_RESPONSES_TEXT);
-            String responseFromMenu = scanner.nextLine();
-            menuService.addResponse(responseFromMenu);
+
         }
     }
 }

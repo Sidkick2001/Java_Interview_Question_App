@@ -9,8 +9,7 @@ public class MenuText {
         2. add - добавить вопрос
         3. exit - выйти
         
-        Введите команду:
-        """;
+        Введите команду:""";
 
     public final String ADD_TEXT = """
                     === Добавление интервью вопроса ===
