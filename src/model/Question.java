@@ -5,13 +5,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Question {
-    private List<String> questions = new ArrayList<>();
+    private String question;
+    private List<String> questionList = new ArrayList<>();
 
-    public List<String> getQuestions() {
-        return questions;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public void addQuestion(String question) {
-        questions.add(question);
+    public String getQuestion() {
+        return question;
+    }
+
+    public List<String> getQuestionList() {
+        return questionList;
+    }
+
+    public void addQuestionList(String question) {
+        questionList.add(question);
     }
 }

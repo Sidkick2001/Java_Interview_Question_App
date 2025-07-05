@@ -1,44 +1,40 @@
 package service;
 
-
 import dao.InterviewsDao;
 import model.Question;
-import model.Response;
+import model.Answer;
 import java.util.List;
 import java.util.stream.IntStream;
 
 public class MenuService {
     Question question = new Question();
-    Response response = new Response();
+    Answer answer = new Answer();
     InterviewsDao InterviewsDao = new InterviewsDao();
-
-
 
     // list
     public void showAllInterviews() {
-        List<String> combined = IntStream.range(0, Math.min(question.getQuestions().size(), response.getResponses().size()))
-                .mapToObj(i ->"Вопрос: " + question.getQuestions().get(i)
-                        + "\n Ответ: " + response.getResponses().get(i))
-                .toList();
-        System.out.println(combined);
+
     }
 
-
-    private void addQuestion(String text) {
+    public boolean addQuestion(String text) {
 
         if (!text.equals("menu")) {
-            question.addQuestion(text);
-        } else return;
+            question.addQuestionList(text);
+            return true;
+        } else return false;
     }
 
-    private void addResponse(String text) {
+    public void addAnswer(String text) {
 
         if (!text.equals("menu")) {
-            response.addResponse(text);
-        } else return;
+            answer.addAnswerList(text);
+        }
+        else return;
     }
 
-    // add
+
+
+
 
 
 }
