@@ -1,8 +1,6 @@
 package controller;
 
 import cli.MenuText;
-import model.Answer;
-import model.Question;
 import service.MenuService;
 import java.util.Scanner;
 
@@ -21,12 +19,15 @@ public class MenuController {
 
             System.out.println(menuText.TYPE_QUESTION_TEXT);
             String TypedQuestion = scanner.nextLine();
-            boolean isAddedQuestion = menuService.addQuestion(TypedQuestion);
-            if (!isAddedQuestion) return;
+            if (!TypedQuestion.equals("menu")) {
+                menuService.addQuestion(TypedQuestion);
+            } else return;
 
             System.out.println(menuText.TYPE_ANSWER_TEXT);
             String TypedAnswer = scanner.nextLine();
-            menuService.addAnswer(TypedAnswer);
+            if (!TypedAnswer.equals("menu")) {
+                menuService.addAnswer(TypedAnswer);
+            } else return;
         }
     }
 }

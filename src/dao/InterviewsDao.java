@@ -1,14 +1,21 @@
 package dao;
 
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class InterviewsDao {
-    private List<String> interviewsList = new ArrayList<>();
+    private int id = 0;
+    private Map<Integer, List<String>> interviewsList = new HashMap<>();
 
-    public List<String> getInterviewsList() {
+    public Map<Integer, List<String>> getInterviewsList() {
         return interviewsList;
     }
 
+    public void addInterviewsList(List<String> list) {
+        interviewsList.put(id, list);
+    }
+
+    
 }

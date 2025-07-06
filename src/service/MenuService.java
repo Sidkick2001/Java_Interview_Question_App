@@ -1,14 +1,12 @@
 package service;
 
 import dao.InterviewsDao;
-import model.Question;
-import model.Answer;
-import java.util.List;
-import java.util.stream.IntStream;
+import model.AnswerList;
+import model.QuestionList;
 
 public class MenuService {
-    Question question = new Question();
-    Answer answer = new Answer();
+    QuestionList questionList = new QuestionList();
+    AnswerList answerList = new AnswerList();
     InterviewsDao InterviewsDao = new InterviewsDao();
 
     // list
@@ -16,20 +14,14 @@ public class MenuService {
 
     }
 
-    public boolean addQuestion(String text) {
-
-        if (!text.equals("menu")) {
-            question.addQuestionList(text);
-            return true;
-        } else return false;
+    // add
+    public void addQuestion(String text) {
+        questionList.addQuestionList(text);
     }
 
+    // add
     public void addAnswer(String text) {
-
-        if (!text.equals("menu")) {
-            answer.addAnswerList(text);
-        }
-        else return;
+        answerList.addAnswerList(text);
     }
 
 
